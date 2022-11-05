@@ -5,7 +5,7 @@
   --header-height: 3rem;
   /*========== Colors ==========*/
   /* Change favorite color */
-  --hue-color: 230;
+  --hue-color: 570;
   /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
   /* HSL color mode */
   --first-color: hsl(var(--hue-color), 69%, 61%);
@@ -372,8 +372,12 @@ img {
 .button--flex {
   display: inline-flex;
   align-items: center;
+  border: none;
 }
-
+.btn-submite{
+  font-family:poppins;
+  font-size: 1rem;
+}
 .button--small {
   padding: .75rem 1rem;
 }
