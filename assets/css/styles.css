@@ -744,7 +744,7 @@ img {
 }
 
 .portfolio__img {
-  width: 265px;
+  width: 1065px;
   border-radius: .5rem;
   justify-self: center;
 }
@@ -1177,7 +1177,7 @@ img {
     width: 450px;
   }
   .portfolio__img {
-    width: 320px;
+    width: 520px;
   }
   .portfolio__content {
     align-items: center;
