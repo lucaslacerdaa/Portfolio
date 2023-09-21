@@ -269,37 +269,56 @@ img {
   border: 0rem solid #ff00c800;
   box-sizing: border-box;
   margin: 0rem auto;
-  padding: 0.5rem;
+  padding: 0.5rem 0 0.5rem 0;
   overflow: hidden;
   width: 100%;
   transform: rotate(3deg);
   position: absolute;
   top: 34rem;
+  
+}
+.broadcastContent{
+    animation: scrolling 25s infinite linear;
+    display: inline-block;
+    color: #000000;
+    font-size: 2rem;
+    font-weight: bold;
+    transform: translateX(100%);
+    white-space: nowrap;
+}
+@keyframes scrolling{
+    from{
+        transform: translateX(0%);
+    }
+    to
+        {transform: translateX(100%);
+    }
 }
 .broadcast2{
   background-color: #ffbb00;
   border: 0rem solid #ff00c800;
   box-sizing: border-box;
   margin: 0rem auto;
-  padding: 0.5rem;
+  padding: 0.5rem 0 0.5rem 0;
   overflow: hidden;
   width: 100%;
   transform: rotate(-3deg);
   position: absolute;
   top: 34rem;
 }
-.broadcastContent{
-  animation: scrolling 25s infinite linear;
-  color: #000000;
-  font-size: 2rem;
-  font-weight: bold;
-  transform: translateX(100%);
-  white-space: nowrap;
-}
-@keyframes scrolling{
-  from{transform: translateX(100%);}
-  to{transform: translateX(-100%);}
-}
+.broadcastContent2{
+    animation: scrolling2 33s infinite linear;
+    color: #000000;
+    font-size: 2rem;
+    font-weight: bold;
+    transform: translateX(100%);
+    white-space: nowrap;
+    overflow: hidden;
+  }
+@keyframes scrolling2{
+    from{transform: translateX(100%);}
+    to{transform: translateX(-100%);}
+  }
 .videobox{
   width: 100%;
   padding-top: 56.25%;
