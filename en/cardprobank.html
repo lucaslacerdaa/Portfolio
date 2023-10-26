@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
         <!--==================== link preview thumbnail ==========-->
         <meta property="og:locale" content="pt_BR" />
         <meta property="og:title" content="Card ProBank" />
@@ -18,6 +19,23 @@
         <meta name="twitter:site" content="@lucaslacerda.tech" />
         <meta name="twitter:creator" content="@ISO__7" />
         <meta property="facebook-domain-verification" content="4e8781193d41646db7ab4e5667f530f8" />
+        
+        <script>
+            function getLanguage() {
+                var userLang = navigator.language || navigator.userLanguage;
+                return userLang;
+            }
+            function redirectToLanguage() {
+                var userLang = getLanguage().toLowerCase();
+
+                if (userLang === 'pt-br' || userLang === 'pt') {
+                    window.location.href = 'https://www.lucaslacerda.tech/cardprobank.html';
+                } else {
+                    window.location.href = 'https://www.lucaslacerda.tech/en/cardprobank.html';
+                }
+            }
+            redirectToLanguage();
+        </script>
 
         <!--==================== FAVICON ====================-->
         <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon" />
