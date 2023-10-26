@@ -1,3 +1,26 @@
+/*==================== LENGUAGES SETEDS =======================
+// Função para obter o idioma do navegador do usuário
+function getLanguage() {
+    var userLang = navigator.language || navigator.userLanguage;
+    return userLang;
+}
+
+// Função para redirecionar o usuário com base no idioma
+function redirectToLanguage() {
+    var userLang = getLanguage().toLowerCase();
+
+    // Verifica o idioma do navegador e redireciona para a URL apropriada
+    if (userLang === 'pt-br' || userLang === 'pt') {
+        window.location.href = 'https://www.lucaslacerda.tech/index.html'; // URL para o idioma português
+    } else {
+        window.location.href = 'https://www.lucaslacerda.tech/Portfolio/en/index.html'; // URL para o idioma inglês (padrão)
+    }
+}
+
+// Chama a função de redirecionamento quando a página é carregada
+redirectToLanguage();
+*/
+
 /*==================== MENU SHOW Y HIDDEN ====================*/
 const navMenu = document.getElementById('nav-menu'),
     navToggle = document.getElementById('nav-toggle'),
