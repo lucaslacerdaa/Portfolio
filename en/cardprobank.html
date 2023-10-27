@@ -32,6 +32,46 @@
         <link rel="stylesheet" href="../assets/css/styles.css">
 
         <title>Card ProBank</title>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var languageSelect = document.getElementById("language-select");
+
+                // Verificar se há um idioma armazenado no localStorage
+                var savedLanguage = localStorage.getItem("language");
+
+                // Se não houver, identificar o idioma do sistema
+                var userLanguage = savedLanguage || navigator.language.substr(0, 2);
+
+                // Definir o idioma selecionado no dropdown e no localStorage
+                languageSelect.value = userLanguage;
+                localStorage.setItem("language", userLanguage);
+
+                // Redirecionar o usuário para a página correspondente ao idioma
+                redirectToLanguagePage(userLanguage);
+
+                // Alterações no dropdown redirecionam o usuário para a página correspondente
+                languageSelect.addEventListener("change", function() {
+                    var selectedLanguage = languageSelect.value;
+                    localStorage.setItem("language", selectedLanguage);
+                    redirectToLanguagePage(selectedLanguage);
+                });
+
+                function redirectToLanguagePage(language) {
+                    // Lógica para redirecionar o usuário para a página correspondente ao idioma
+                    // Exemplo: window.location.href = "pagina_" + language + ".html";
+                    if(localStorage.getItem("language" == 'pt-br')){
+                        window.location.href = "https://www.lucaslacerda.tech/cardprobank.html";
+                    }
+                    else{
+                        window.location.href = "https://www.lucaslacerda.tech/" + language + "/cardprobank.html";
+                    };
+                    
+                    console.log("Usuário redirecionado para a página do idioma: " + language);
+                }
+            });
+        </script>
+
     </head>
     <body>
         <!--==================== HEADER ====================-->
@@ -89,6 +129,14 @@
                     <div class="nav__toggle" id="nav-toggle">
                         <i class="uil uil-apps"></i>
                     </div>
+
+                    <div class="language_bnt">
+                        <select name="" id="language-select">
+                            <option value="en">En</option>
+                            <option value="pt-br">Pt-br</option>
+                        </select>
+                    </div>
+
                 </div>
             </nav>
         </header>
