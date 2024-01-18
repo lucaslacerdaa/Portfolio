@@ -32,7 +32,7 @@
   --small-font-size: .813rem;
   --smaller-font-size: .75rem;
   /*========== Font weight ==========*/
-  --font-medium: 400;
+  --font-medium: 600;
   --font-semi-bold: 700;
   /*========== Margenes Bottom ==========*/
   --mb-0-25: .25rem;
@@ -582,7 +582,10 @@ left: 0;
 }
 
 .about__description {
-  text-align: center;
+  text-align: justify;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
   margin-bottom: var(--mb-2-5);
 }
 
@@ -772,6 +775,10 @@ left: 0;
   display: inline-block;
   font-size: var(--small-font-size);
   margin-bottom: var(--mb-1);
+  text-align: justify;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 .qualification__calendar {
@@ -1332,7 +1339,11 @@ left: 0;
     width: 350px;
   }
   .about__description {
-    text-align: initial;
+    /* text-align: initial; */
+    text-align: justify;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
   }
   .about__info {
     justify-content: space-between;
