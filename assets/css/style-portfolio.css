@@ -261,23 +261,36 @@ img {
 
 /*==================== HOME ====================*/
 .home__container {
+  width: 40vw;
+  height: 100vh;
   gap: 1rem;
-  padding: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  display: flex;
 }
 
 .home__content {
   grid-template-columns: .5fr 2fr;
-  /* padding-top: 3.5rem; */
   align-items: center;
+  padding: auto;
 }
 
 .home__social {
+  height: 8rem;
   display: grid;
   grid-template-columns: max-content;
   row-gap: 1rem;
 }
-
+.menu__social{
+  display: flex;
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  justify-content: center; /* Alinha os itens horizontalmente ao centro */
+  height: 100vh; /* Define a altura da div pai X */
+}
 .home__social-icon {
+  flex-direction: column;
+  align-items: flex-start;
+  height: min-content;
   font-size: 1.25rem;
   color: var(--first-color);
 }
@@ -293,6 +306,13 @@ img {
 
 .home__blob-img {
   width: 170px;
+}
+.home__img{
+  padding: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
 }
 
 .home__scroll-name {
@@ -326,16 +346,22 @@ img {
  gap: 1.5rem;
 }
 .home{
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   align-self: stretch;
+  padding: 0;
+}
+.alinhador__foto{
+  display: inline;
+  height: min-content;
+  width: auto;
 }
 .home__content{
-  display: inline;
-  align-items:stretch;
-  width: 50%;
-  
-  
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  height: 100vh;
+  padding: 4rem;
 }
 .home__data{
   display: flex;
@@ -345,6 +371,9 @@ img {
   justify-content: center;
   align-items: flex-start;
   gap: 2.5rem;
+}
+.home__title{
+  font-size: var(--big-font-size);
 }
 
 .button {
@@ -360,18 +389,36 @@ img {
   padding-left: 2rem ;
   color: var(--text-color);
 }
+
+.title__slide{
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+.cards{
+  width: 60%;
+}
 .slide_cards{
-  height: 100%;
+  width: 100%;
+  height: auto;
   display: flex;
-  align-content: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: initial;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.slide{
+  overflow-x: auto; /* Habilita a rolagem horizontal */
+  scroll-snap-type: x mandatory; /* Força a rolagem suave até o início de cada card */
+  overflow-y:hidden;
+  display: flex;
+  justify-content: initial;
+  align-items: center;
 }
 .card{
   display: flex;
   width: 30rem;
   height: max-content;
   border-radius: 0.5rem;
+  margin-right: 2rem;
   padding: 1rem;
   flex-direction: column;
   justify-content: center;
@@ -380,9 +427,12 @@ img {
   flex-shrink: 0;
   background-color:var(--first-color-second);
 }
+
+
 .img_card{
-  width: 30rem;
-  height: auto;
+  width: auto;
+  height: 25rem;
+  object-fit: cover;
 }
 
 /*==================== MEDIA QUERIES ====================*/
