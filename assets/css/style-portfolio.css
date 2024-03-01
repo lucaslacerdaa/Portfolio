@@ -98,6 +98,9 @@ body.dark-theme {
 
 html {
   scroll-behavior: smooth;
+  scrollbar-width:unset;
+  overflow-y: none;
+  overflow-x: none;
 }
 
 body {
@@ -128,7 +131,7 @@ img {
 
 /*==================== REUSABLE CSS CLASSES ====================*/
 .section {
-  padding: 2rem 0 4rem;
+  padding: 0rem 0 0rem;
   display: inline-flex;
 }
 
@@ -345,35 +348,13 @@ img {
 .act_btn{
  gap: 1.5rem;
 }
-.home{
-  width: 100vw;
-  height: 100vh;
-  align-self: stretch;
-  padding: 0;
-}
-.alinhador__foto{
-  display: inline;
-  height: min-content;
-  width: auto;
-}
-.home__content{
-  display: flex;
-  align-items: center; 
-  justify-content: center; 
-  height: 100vh;
-  padding: 4rem;
-}
-.home__data{
-  display: flex;
-  width: auto;
-  height: auto;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 2.5rem;
-}
+
 .home__title{
   font-size: var(--big-font-size);
+}
+
+.home__subtitle{
+  font-size: var(--normal-font-size);
 }
 
 .button {
@@ -391,59 +372,59 @@ img {
 }
 
 .title__slide{
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-}
-.cards{
-  width: 60%;
-}
-.slide_cards{
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: initial;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-.slide{
-  overflow-x: auto; /* Habilita a rolagem horizontal */
-  scroll-snap-type: x mandatory; /* Força a rolagem suave até o início de cada card */
-  overflow-y:hidden;
-  display: flex;
-  justify-content: initial;
-  align-items: center;
-}
-.card{
-  display: flex;
-  width: 30rem;
-  height: max-content;
-  border-radius: 0.5rem;
-  margin-right: 2rem;
-  padding: 1rem;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 0.5rem;
-  flex-shrink: 0;
-  background-color:var(--first-color-second);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-
-.img_card{
-  width: auto;
-  height: 25rem;
-  object-fit: cover;
-}
 
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
 @media screen and (max-width: 350px) {
+
+  .cards{
+    width: 100%;
+    height: 100%;
+    padding-left: 2rem;
+  }
+  .slide_cards{
+    width: 85%;
+    height: auto;
+  }
+  .slide{
+    scroll-snap-type: x mandatory; 
+    overflow-y:auto;
+    display: inline;
+    justify-content: initial;
+    align-items: center;
+    scrollbar-width: none;
+  }
+  .card{
+    display: flex;
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: start;
+    /* align-items: flex-start; */
+    gap: 0.5rem;
+    flex-shrink: 0;
+    background-color: #f4f4f4;
+  }
   
+  
+  .img_card{
+    width: auto;
+    height: 10rem;
+    object-fit: cover;
+  }
 }
+
 
 /* For medium devices */
 @media screen and (min-width: 568px) {
-  .
+  
 }
 
 @media screen and (min-width: 768px) {
@@ -452,5 +433,74 @@ img {
 
 /* For large devices */
 @media screen and (min-width: 1024px) {
+  .home{
+    width: 100vw;
+    height: 100vh;
+    align-self: stretch;
+    padding: 0;
+  }
+  .alinhador__foto{
+    display: inline;
+    height: min-content;
+    width: auto;
+  }
+  .home__content{
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    /* height: 100vh; */
+    padding: 4rem;
+  }
+  .home__data{
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+  .cards{
+    width: 59.5%;
+    height: 80%;
+  }
+  .slide_cards{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: initial;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    scrollbar-width: none;
+  }
+  .slide{
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; 
+    overflow-y:hidden;
+    display: flex;
+    justify-content: initial;
+    align-items: center;
+    scrollbar-width: none;
+  }
+  .card{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    border-radius: 0.5rem;
+    margin-right: 2rem;
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    gap: 0.5rem;
+    flex-shrink: 0;
+    background-color:var(--first-color-second);
+  }
   
+  
+  .img_card{
+    width: auto;
+    height: 25rem;
+    object-fit: cover;
+  }
 }
