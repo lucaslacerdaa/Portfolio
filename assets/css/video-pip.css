@@ -1,0 +1,22 @@
+#video-container {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+  
+  #video {
+    display: block;
+    width: 100%;
+  }
+  
+  #close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    display: none; /* Inicialmente oculto */
+  }

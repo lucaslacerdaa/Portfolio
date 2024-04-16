@@ -30,6 +30,7 @@
 
         <!--==================== CSS ==========-->
         <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="assets/css/video-pip.css">
 
         <title>The Problem</title>
     </head>
@@ -98,7 +99,18 @@
             <!--==================== HOME ====================-->
             <section class="home section" id="home">
                 <div class="home__container container grid">
-                    <img src="assets/img/The Problem/01.png" alt="" class="portfolio__imgs">
+                    <!-- <div id="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/1FRl9SuBoHM?si=3o_gCLom4C3EwBBe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/wvg0M57cakc?si=GmVpPnX5L940Cfu6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div> -->
+
+                    <div id="video-container">
+                        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/wvg0M57cakc?si=GmVpPnX5L940Cfu6" frameborder="0" allowfullscreen></iframe>
+                        <div id="close-btn">X</div>
+                    </div>
+                    
+                    <!-- <img src="assets/img/The Problem/01.png" alt="" class="portfolio__imgs"> -->
                     <div class="home__content grid">
                         <div class="home__data">
                             <h1 class="home__title">🔬</h1>
@@ -693,5 +705,6 @@
 
         <!--==================== MAIN JS ====================-->
         <script src="assets/js/main.js"></script>
+        <script src="assets/js/video-pip.js"></script>
     </body>
 </html>
